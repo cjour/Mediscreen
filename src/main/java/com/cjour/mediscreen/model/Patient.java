@@ -28,7 +28,7 @@ public class Patient {
         this.address = address;
         this.phoneNumber = phoneNumber;
     }
-    
+
     public String getFirstname() {
         return firstname;
     }
