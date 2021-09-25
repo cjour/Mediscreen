@@ -2,6 +2,8 @@ package com.cjour.mediscreen.model;
 import javax.persistence.Entity;
 import java.util.Date;
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name= "patient")
@@ -10,11 +12,17 @@ public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer Id;
+
     private String firstname;
+
     private String name;
+
     private Date birthdate;
+
     private String genre;
+
     private String address;
+
     private String phoneNumber;
 
     public Patient(){}
@@ -27,6 +35,10 @@ public class Patient {
         this.genre = genre;
         this.address = address;
         this.phoneNumber = phoneNumber;
+    }
+
+    public Integer getId() {
+        return Id;
     }
 
     public String getFirstname() {

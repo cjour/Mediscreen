@@ -1,16 +1,21 @@
 package com.cjour.mediscreen.service;
 
 import com.cjour.mediscreen.model.Patient;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface IPatientService {
 
-    public List<Patient> findAll();
+    List<Patient> findAll();
 
-    public Patient save (Patient patient);
+    Patient save(Patient patient);
 
-    public Patient findById(Integer id);
+    Patient findById(Integer id);
 
-    public void delete(Integer id);
+    void delete(Integer id);
+
+    Patient findByFirstName(String firstname);
+
 }

@@ -36,4 +36,9 @@ public class PatientService implements IPatientService {
             patientRepository.delete(patient);
         }
     }
+
+    @Override
+    public Patient findByFirstName(String firstname) {
+        return patientRepository.findByFirstname(firstname);
+    }
 }
